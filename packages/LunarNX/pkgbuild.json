@@ -24,7 +24,7 @@
             "type": "zip",
             "zip": [
                 {
-                    "path": "/LunarNX-0.3.0/**/*",
+                    "path": "/LunarNX-*/**/*",
                     "dest": "/switch/LunarNX",
                     "type": "update"
                 }
