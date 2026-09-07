@@ -4,7 +4,7 @@
         "title": "LunarNX",
         "author": "thinkzhou",
         "category": "tool",
-        "version": "0.3.0",
+        "version": "0.3.2",
         "url": "https://github.com/thinkzhou/LunarNX",
         "license": "Affero GPLv3",
         "description": "Xbox and PlayStation streaming client",
@@ -20,16 +20,16 @@
             "url": "screen.png"
         },
         {
-          "url": "https://github.com/thinkzhou/LunarNX/releases/download/v0.3.0/LunarNX-0.3.0.zip",
-          "type": "zip",
-          "zip": [
-            {
-              "path": "/LunarNX-0.3.0/**/*",
-              "dest": "/switch/LunarNX",
-              "type": "update"
-            }
-          ]
+            "url": "https://github.com/thinkzhou/LunarNX/releases/download/v0.3.2/LunarNX.zip",
+            "type": "zip",
+            "zip": [
+                {
+                    "path": "/LunarNX-0.3.0/**/*",
+                    "dest": "/switch/LunarNX",
+                    "type": "update"
+                }
+            ]
         }
     ],
-    "changelog": "v0.3.0\\n- Improved Xbox and PlayStation streaming policies, packet-loss recovery, and long-session stability.\\n- Hardened PS4/PS5 discovery, pairing, PSN startup, haptics, HEVC, and high-bitrate playback.\\n- Fixed 720p rendering artifacts, controller input leakage, and audio/video recovery edge cases.\\n- Refreshed the About, community, support, diagnostics, and release packaging experience."
+    "changelog": "v0.3.2\\n0.3.2: https://github.com/thinkzhou/LunarNX/compare/v0.3.1...v0.3.2 (2026-09-07)\\n\\n\\n Bug Fixes\\n\\n- avoid GPU lock inversion when stopping streams (76a8a2f: https://github.com/thinkzhou/LunarNX/commit/76a8a2f5df0d26ecf4a7a357c60dd978bcec2e52)\\n- prevent deadlock when exiting a stream (011a0c9: https://github.com/thinkzhou/LunarNX/commit/011a0c9a407d97798445d0268d3d712a72255960)\\n- release:- match Sphaira package layout (dff50b9: https://github.com/thinkzhou/LunarNX/commit/dff50b98da6028ba90d964f727e7ce8864fb2d97)\\n- release:- match Sphaira package layout (5f5e5ec: https://github.com/thinkzhou/LunarNX/commit/5f5e5ec60d0c5e0f54c4ccfdfcb51dbaa23cc875)\\n\\nv0.3.0\\n- Improved Xbox and PlayStation streaming policies, packet-loss recovery, and long-session stability.\\n- Hardened PS4/PS5 discovery, pairing, PSN startup, haptics, HEVC, and high-bitrate playback.\\n- Fixed 720p rendering artifacts, controller input leakage, and audio/video recovery edge cases.\\n- Refreshed the About, community, support, diagnostics, and release packaging experience."
 }
