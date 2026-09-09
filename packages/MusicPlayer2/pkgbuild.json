@@ -4,17 +4,17 @@
         "title": "MusicPlayer2",
         "author": "zhongyang219, Schweik7 (Switch port)",
         "category": "tool",
-        "version": "0.8.0",
+        "version": "0.8.5",
         "url": "https://github.com/Schweik7/MusicPlayer2-Switch",
         "license": "GPL-3.0",
         "binary": "/switch/MusicPlayer2.nro",
         "description": "Music player with synced lyrics, embedded cover art and online lyric download",
         "details": "A Nintendo Switch port of MusicPlayer2. Plays MP3, FLAC, OGG, Opus, WAV, MOD and MIDI.\n\n- Synced LRC lyrics with per-character highlighting, bilingual display (single or two column), and drag-to-browse\n- Reads title/artist/album and embedded cover art from the files themselves (ID3v2, FLAC and Ogg Vorbis comments), so Chinese and Japanese track names show correctly even though the Switch filesystem cannot store non-ASCII filenames\n- Downloads lyrics and cover art from NetEase Cloud Music or QQ Music, optionally writing them back into the audio file\n- Full touch support: every function is reachable both by controller and by touch. Turning touch off switches to an immersive view with a larger cover\n- Spectrum view, sleep-friendly screen dimming, and in-app updates\n\nSource: https://github.com/Schweik7/MusicPlayer2-Switch"
     },
-    "changelog": "v0.8.0\n- Moved to its own repository\n\nv0.7.7\n- Lyric time offset is now off by default; press B twice to exit\n\nv0.7.6\n- Fixed in-app updates not being able to replace the running NRO\n\nv0.7.0\n- Immersive mode, lyric background image, on-screen control clusters that mirror the physical inputs",
+    "changelog": "v0.8.5\\n修复：更新原来要重启两次\\n\\n下载完退出再进，仍然提示「发现新版本，重启后更新」，得再关一次、重新启动才真正生效。\\n\\n原因是替换动作放在启动时。但 NRO 在应用代码跑起来之前就已经被整个读进内存了——那一趟启动跑的仍然是旧版本，只是顺手把磁盘上的文件换掉，所以它的更新检查照样报「有新版本」。\\n\\n改成在退出时替换（romfsExit() 之后，那时文件不再被 romfs 按住）。下一次启动读到的就已经是新的，只需重启一次。\\n\\n启动时的那次替换保留为兜底，处理「上次没走到退出」的情形：崩溃、被强杀、或者退出时改名失败。\\n\\n> 从 0.8.4 更新到本版时仍然是旧的两步流程（做替换的永远是旧版本的代码）。装上 0.8.5 之后，以后的更新就都只需重启一次了。\\n\\n 设置列表可以滚动了\\n\\n底部状态区改成固定高度，列表用剩下的部分。\\n\\n以前是反过来的：列表铺完剩多少算多少，于是每加一个设置项就把下载进度往下挤一点，直到挤出屏幕。这个问题前后出现过三次，每次都靠「再删两个设置项」缓解——根因是可用高度由项数决定，而不是项数去适应可用高度。\\n\\n- 超出一屏的部分靠滚动看到，手指拖动带惯性（和播放列表、文件浏览同一套）\\n- 方向键移动时自动把选中项带进可视区\\n- 有内容在屏幕外时才画滚动条\\n- 滚出可视区的行不参与命中判定，不会在原来的位置上被误触\\n\\n 文案\\n\\n中文的「关闭（存同级目录）」说明恢复了——中文窄，放得下。挤到标签的一直是英文，同一个键在译文表里给短短一个 Off 就够了。\\n\\n\\n\\n图标没有变化，用 sphaira 装了前端的话不需要重装。\\n\\n主机测试 820 条断言全绿，Switch 全量重建零警告。\\n\\nv0.8.0\n- Moved to its own repository\n\nv0.7.7\n- Lyric time offset is now off by default; press B twice to exit\n\nv0.7.6\n- Fixed in-app updates not being able to replace the running NRO\n\nv0.7.0\n- Immersive mode, lyric background image, on-screen control clusters that mirror the physical inputs",
     "assets": [
         {
-            "url": "https://github.com/Schweik7/MusicPlayer2-Switch/releases/download/v0.8.0/MusicPlayer2.nro",
+            "url": "https://github.com/Schweik7/MusicPlayer2-Switch/releases/download/v0.8.5/MusicPlayer2.nro",
             "dest": "/switch/MusicPlayer2.nro",
             "type": "update"
         },
