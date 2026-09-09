@@ -4,17 +4,17 @@
         "title": "MusicPlayer2",
         "author": "zhongyang219, Schweik7 (Switch port)",
         "category": "tool",
-        "version": "0.8.0",
+        "version": "0.8.2",
         "url": "https://github.com/Schweik7/MusicPlayer2-Switch",
         "license": "GPL-3.0",
         "binary": "/switch/MusicPlayer2.nro",
         "description": "Music player with synced lyrics, embedded cover art and online lyric download",
         "details": "A Nintendo Switch port of MusicPlayer2. Plays MP3, FLAC, OGG, Opus, WAV, MOD and MIDI.\n\n- Synced LRC lyrics with per-character highlighting, bilingual display (single or two column), and drag-to-browse\n- Reads title/artist/album and embedded cover art from the files themselves (ID3v2, FLAC and Ogg Vorbis comments), so Chinese and Japanese track names show correctly even though the Switch filesystem cannot store non-ASCII filenames\n- Downloads lyrics and cover art from NetEase Cloud Music or QQ Music, optionally writing them back into the audio file\n- Full touch support: every function is reachable both by controller and by touch. Turning touch off switches to an immersive view with a larger cover\n- Spectrum view, sleep-friendly screen dimming, and in-app updates\n\nSource: https://github.com/Schweik7/MusicPlayer2-Switch"
     },
-    "changelog": "v0.8.0\n- Moved to its own repository\n\nv0.7.7\n- Lyric time offset is now off by default; press B twice to exit\n\nv0.7.6\n- Fixed in-app updates not being able to replace the running NRO\n\nv0.7.0\n- Immersive mode, lyric background image, on-screen control clusters that mirror the physical inputs",
+    "changelog": "v0.8.2\\n界面语言：简体中文 / English\\n\\n设置里多了一项「语言」，即时生效。\\n\\n这一项的值刻意不翻译，永远显示各语言自己的名字（简体中文 / English）——万一切到看不懂的语言，也还认得出怎么切回来。\\n\\n实现上用中文原文本身当键，而不是另起一套 STR_XXX 符号。好处是缺翻译时自动退回中文：漏一条只是那一处显示中文，不会变成空白或 STR_1234。\\n\\n 设置列表瘦身\\n\\n去掉了「触摸操作」和「双语歌词排版」两项。不是砍功能——这两件事在界面上都已经有常驻入口：\\n\\n- 触摸开关：顶栏那个按钮（另有 LS）\\n- 单栏 / 双栏：歌词区工具排上的 1C/2C 按钮（另有 R）\\n\\n触摸和按键两条路都齐了，设置里那份就是纯冗余。列表短两行，底部的下载进度重新落回可视区——这个问题反复出现过，根因是设置项只增不减。\\n\\n 文案\\n\\n- 「下载后写入歌曲文件」→「下载歌词封面后嵌入歌曲文件」\\n- 「关闭（只存旁边）」→「关闭（存同级目录）」\\n\\n\\n\\n译文表带自检，主机端测试会跑：printf 的格式说明符必须逐个对应（漏一个 %s 是崩溃，不是显示问题），底栏提示按 | 的分段数必须一致（排版按段数均分间距）。\\n\\n主机测试 820 条断言全绿，Switch 全量重建零警告。\\n\\nv0.8.0\n- Moved to its own repository\n\nv0.7.7\n- Lyric time offset is now off by default; press B twice to exit\n\nv0.7.6\n- Fixed in-app updates not being able to replace the running NRO\n\nv0.7.0\n- Immersive mode, lyric background image, on-screen control clusters that mirror the physical inputs",
     "assets": [
         {
-            "url": "https://github.com/Schweik7/MusicPlayer2-Switch/releases/download/v0.8.0/MusicPlayer2.nro",
+            "url": "https://github.com/Schweik7/MusicPlayer2-Switch/releases/download/v0.8.2/MusicPlayer2.nro",
             "dest": "/switch/MusicPlayer2.nro",
             "type": "update"
         },
