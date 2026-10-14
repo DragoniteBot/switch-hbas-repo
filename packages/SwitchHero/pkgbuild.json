@@ -1,0 +1,24 @@
+{
+    "package": "SwitchHero",
+    "info": {
+        "title": "Switch Hero",
+        "author": "Rodrigo Ferreira",
+        "category": "game",
+        "version": "0.3.1",
+        "url": "https://github.com/R-drg/switch-hero",
+        "license": "MIT",
+        "description": "A rhythm game for Nintendo Switch",
+        "details": "Switch Hero is a five-lane rhythm game for Nintendo Switch, inspired by classic guitar rhythm games. Play with Joy-Con, a Pro Controller or a compatible Wii guitar controller.\\n\\nIt reads Clone Hero-style song folders, so you can bring your existing songs and charts to the Switch. A demo song is included. Add more songs to /switch/switch-hero/songs.\\n\\nFeatures:\\n  - Joy-Con, Pro Controller and Wii guitar support\\n  - Clone Hero-compatible custom songs and charts\\n  - Multiple difficulty levels, solos and star power\\n  - Split-screen multiplayer for 2 to 4 players (docked)\\n  - Practice mode\\n  - 13 highways and 24 note color palettes\\n  - Score tracking and results screen\\n  - English, Brazilian Portuguese and Spanish"
+    },
+    "assets": [
+        {
+            "type": "icon",
+            "url": "icon.png"
+        },
+        {
+            "type": "banner",
+            "url": "screen.png"
+        }
+    ],
+    "changelog": "  0.3.1\\n  - Spanish translation\\n  - Classic Guitar Hero fret handling on gamepads: anchoring, re-strikes with\\n  lower frets, and pull-offs on HOPO and tap notes\\n\\n  0.3\\n  - Split-screen multiplayer for 2 to 4 players (docked)\\n  - Practice mode and solos\\n  - Brazilian Portuguese translation\\n  - Customization menu with 13 highways and 24 note palettes\\n  - Faster start-up, song list and split screen\\n"
+}
