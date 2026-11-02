@@ -1,0 +1,29 @@
+{
+    "package": "IPTVPlayer",
+    "info": {
+        "title": "IPTV Player",
+        "author": "muratgokce",
+        "category": "tool",
+        "version": "1.3.1",
+        "url": "https://github.com/murat303/iptv-player",
+        "license": "GPLv3",
+        "description": "Live TV, movies and series from IPTV",
+        "details": "IPTV Player plays the live channels, movies and series of your own IPTV subscription: Xtream Codes API accounts and M3U / M3U8 playlists. It does not come with any channels, playlists or accounts.\\n\\nA fork of TsVitch (giovannimirulla) with the Xtream movies and series work of ratk. It adds:\\n- Detail pages for movies and series with plot, cast, backdrop and resume\\n- Seasons and episodes with stills and progress, the next episode after a countdown\\n- Poster grids with ratings and years, sorting and search\\n- Now / next programme guide in the player\\n- Audio and subtitle tracks, subtitle styles, 10-second skips with the D-pad\\n- Downloads with pause and resume, watched without internet\\n- Lists saved on the SD card, refreshed every day, every week or only by hand\\n- English, Turkish, Italian and Brazilian Portuguese\\n\\nFiles: sdmc:/switch/iptv-player/. The settings, favorites and history of TsVitch are copied at the first start. Use it only with services and content you are allowed to watch."
+    },
+    "assets": [
+        {
+            "type": "icon",
+            "url": "icon.png"
+        },
+        {
+            "type": "banner",
+            "url": "screen.png"
+        },
+        {
+            "url": "https://github.com/murat303/iptv-player/releases/download/v1.3.1/iptv-player.nro",
+            "type": "update",
+            "dest": "/switch/IPTVPlayer/iptv-player.nro"
+        }
+    ],
+    "changelog": "1.0.0: the first release."
+}
